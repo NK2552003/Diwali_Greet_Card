@@ -1,0 +1,364 @@
+body,
+html {
+  margin: 0px;
+  font-family: "Modak", system-ui;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  min-width: 100%;
+  height: 100vh; /* Set the height to 100vh to fit the screen */
+  flex: none;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+}
+
+.sec1 {
+  min-width: 100%;
+  height: 100vh; /* Set the height to 100vh to fit the screen */
+  flex: none;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  position: relative; /* Add this to position the canvas */
+}
+
+#fireworksCanvas {
+  background-color: rgb(0, 0, 0); /* Set the background to a dark color */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#element {
+  z-index: 30;
+  color: rgb(255, 255, 255);
+  font-size: 80px;
+  width: 90vw;
+  text-align: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    272deg,
+    #81ffdd,
+    #10f4e5,
+    #fbff00,
+    #02f2ff,
+    #3ff935,
+    #c8ff53
+  );
+  background-size: 1800% 1800%;
+
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.star {
+  position: absolute;
+  border-radius: 50%;
+  animation: twinkle 1.5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#starCont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 100;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 28% 0%;
+  }
+
+  50% {
+    background-position: 73% 100%;
+  }
+
+  100% {
+    background-position: 28% 0%;
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 28% 0%;
+  }
+
+  50% {
+    background-position: 73% 100%;
+  }
+
+  100% {
+    background-position: 28% 0%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 28% 0%;
+  }
+
+  50% {
+    background-position: 73% 100%;
+  }
+
+  100% {
+    background-position: 28% 0%;
+  }
+}
+
+.flower-container {
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+}
+
+.flower {
+  z-index: 200;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.flower:hover {
+  transform: rotate(45deg) scale(1.1);
+}
+
+/* Petals Styling */
+.petal {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background-color: orange;
+  border-radius: 40px 40px 0 0;
+  transform-origin: bottom center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.flower:hover .petal {
+  transform: scale(1.2);
+}
+
+.petal:nth-child(1) {
+  transform: rotate(0deg) translateY(-50%);
+}
+.petal:nth-child(2) {
+  transform: rotate(45deg) translateY(-50%);
+}
+.petal:nth-child(3) {
+  transform: rotate(90deg) translateY(-50%);
+}
+.petal:nth-child(4) {
+  transform: rotate(135deg) translateY(-50%);
+}
+.petal:nth-child(5) {
+  transform: rotate(180deg) translateY(-50%);
+}
+.petal:nth-child(6) {
+  transform: rotate(225deg) translateY(-50%);
+}
+.petal:nth-child(7) {
+  transform: rotate(270deg) translateY(-50%);
+}
+.petal:nth-child(8) {
+  transform: rotate(315deg) translateY(-50%);
+}
+
+/* Center Styling */
+.center {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.flowerCont {
+  display: flex;
+  top: 0;
+  left: 0;
+}
+
+.flower-row {
+  padding-left: 25px;
+}
+
+.topCont {
+  z-index: 200;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 50%;
+}
+
+.flowerCont2 {
+  display: flex;
+}
+
+.diya-container {
+  z-index: 300;
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 200px;
+  margin: 0 auto;
+  animation: swing 4s ease-in-out infinite; /* Animation for swinging effect */
+}
+
+.diya-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 40px;
+  height: 140px;
+  border: 1px solid grey; /* String */
+  transform: translateX(-50%);
+}
+
+.diya {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flame {
+  width: 10px;
+  height: 30px;
+  background: radial-gradient(circle, yellow 0%, orange 60%, red 100%);
+  border-radius: 50%;
+  animation: flicker 1s infinite ease-in-out alternate;
+}
+
+.lamp-body {
+  width: 60px;
+  height: 30px;
+  background-color: #8b4513; /* Brown color for the diya */
+  border-radius: 40% 40% 60% 60%;
+  border: 2px solid #654321;
+  position: relative;
+  margin-top: 10px;
+}
+
+/* Flickering flame animation */
+@keyframes flicker {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Swinging effect
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+} */
+
+.leaf {
+  position: absolute;
+  z-index: -100;
+  top: -45px;
+  left: -15px;
+  width: 70px;
+  height: 30px;
+  background-color: #32a852;
+  border-radius: 50%;
+  border: 1px solid green;
+  transform-origin: center center;
+  transform: rotate(-145deg);
+}
+
+.left-leaf {
+  transform: rotate(-45deg) translate(-35px, 35px);
+}
+
+.right-leaf {
+  transform: rotate(45deg) translate(35px, 35px);
+}
+.bottomF {
+  z-index: 300;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.391);
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+  font-family: "Comic Sans MS";
+}

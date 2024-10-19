@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+</head>
+<body>
+        <section class="sec1">
+            <div class="topCont">
+                <div class="flowerCont" id="flower-container-1"></div>
+                <div class="flowerCont2" id="flower-container-2"></div>
+            </div>
+            <div class="diya-container">
+                <div class="diya">
+                    <div class="flame"></div>
+                    <div class="lamp-body"></div>
+                </div>
+            </div>
+            <div id="element"></div>
+            <div class="starCont" id="starCont"></div>
+            <canvas id="fireworksCanvas" height="0"></canvas>
+        </section>
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed("#element", {
+            strings: [
+                "Happy Diwali!",
+                "शुभ दीपावली",
+                "दिवाली मुबारक",
+                "ਦੀਵਾਲੀ ਦੀਆਂ ਮੁਬਾਰਕਾਂ",
+                "દીપાવલીના શુભકામના",
+                "दीपावळीच्या शुभेच्छा",
+            ],
+            typeSpeed: 70,
+            startDelay: 100,
+            backSpeed: 50,
+            backDelay: 1500, // Delay before typing back
+            loop: true // Enables infinite looping
+        });
+    </script>
+</body>
+</html>
